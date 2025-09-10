@@ -1,0 +1,8 @@
+# Core dependencies
+colorama>=0.4.4          # Cross-platform colored terminal text
+psutil>=5.8.0           # System and process utilities
+wmi>=1.5.1              # Windows Management Instrumentation
+pywin32>=301            # Windows API access
+
+# Optional dependencies
+pyyaml>=6.0             # Configuration file support

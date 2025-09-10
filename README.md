@@ -36,6 +36,9 @@ A customizable Windows system information display tool inspired by neofetch/fast
    # Easy way (recommended)
    winfetch.bat
    
+   # For double-clicking in Windows Explorer
+   # Double-click: run-winfetch.bat
+   
    # Or using PowerShell
    .\winfetch.ps1
    
@@ -50,6 +53,7 @@ A customizable Windows system information display tool inspired by neofetch/fast
 WinFetch includes convenient launcher scripts that automatically find your Python installation:
 
 - **`winfetch.bat`** - Windows batch file (works in CMD and PowerShell)
+- **`run-winfetch.bat`** - Double-click friendly version that pauses to show output
 - **`winfetch.ps1`** - PowerShell script with better error handling
 
 ### Basic Usage
@@ -57,6 +61,8 @@ WinFetch includes convenient launcher scripts that automatically find your Pytho
 ```bash
 # Display system info with default ASCII art
 winfetch.bat
+# or for double-clicking
+# Double-click: run-winfetch.bat
 # or
 .\winfetch.ps1
 # or

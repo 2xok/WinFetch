@@ -50,3 +50,11 @@ exit /b 1
 :run
 REM Run WinFetch with all passed arguments
 "%PYTHON_EXE%" "%SCRIPT_DIR%main.py" %*
+
+REM Pause so user can see the output when double-clicked
+REM This detects if the batch was double-clicked vs run from command line
+echo %CMDCMDLINE% | find /i "cmd /c" >nul && (
+    echo.
+    echo Press any key to close...
+    pause >nul
+)

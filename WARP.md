@@ -65,6 +65,7 @@ Completed components:
 - `winfetch/ascii_art.py` ✅ ASCII art loading system
 - `ascii_art/` directory ✅ Built-in ASCII art files
 - `winfetch.bat` ✅ Windows batch launcher
+- `run-winfetch.bat` ✅ Double-click friendly batch launcher
 - `winfetch.ps1` ✅ PowerShell launcher script
 
 Still needed:

@@ -13,20 +13,27 @@ WinFetch is a Windows system information display tool inspired by neofetch, buil
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the application
+# Run the application (easy way)
+winfetch.bat
+# or
+.\winfetch.ps1
+# or directly
 python main.py
 
 # Run with specific ASCII art
-python main.py --ascii-art windows_simple
+winfetch.bat --ascii-art windows_simple
 
 # List available built-in ASCII arts
-python main.py --list-arts
+winfetch.bat --list-arts
 
 # Disable colors
-python main.py --no-color
+winfetch.bat --no-color
+
+# Show version
+winfetch.bat --version
 
 # Use custom config file
-python main.py --config path/to/config.yaml
+winfetch.bat --config path/to/config.yaml
 ```
 
 ### Testing & Development
@@ -49,15 +56,21 @@ pip install .
 
 ## Current Development Status
 
-⚠️ **Note**: This project is currently being restored after an accidental file deletion. 
-Some core modules may be missing and need to be recreated:
+✅ **Status**: Core functionality is working and ready for use!
 
-- `winfetch/display.py` - Display engine with side-by-side rendering
-- `winfetch/sysinfo.py` - System information collection using Windows APIs  
-- `winfetch/config_manager.py` - Configuration management with YAML support
-- `winfetch/ascii_art.py` - ASCII art loading system
-- `ascii_art/` directory - Built-in ASCII art files
-- `setup.py` - Package setup script
+Completed components:
+- `winfetch/display.py` ✅ Display engine with side-by-side rendering
+- `winfetch/sysinfo.py` ✅ System information collection using Windows APIs  
+- `winfetch/config_manager.py` ✅ Configuration management with YAML support
+- `winfetch/ascii_art.py` ✅ ASCII art loading system
+- `ascii_art/` directory ✅ Built-in ASCII art files
+- `winfetch.bat` ✅ Windows batch launcher
+- `winfetch.ps1` ✅ PowerShell launcher script
+
+Still needed:
+- `setup.py` - Package setup script for pip installation
+- Additional ASCII art designs
+- Comprehensive test suite
 
 ## Architecture Overview
 

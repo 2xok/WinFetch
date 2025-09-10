@@ -18,44 +18,113 @@ A customizable Windows system information display tool inspired by neofetch/fast
 - Python 3.7 or higher
 - Windows 10/11 (designed specifically for Windows)
 
-### Install Dependencies
+### Quick Start
 
-```bash
-pip install -r requirements.txt
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/2xok/WinFetch.git
+   cd WinFetch
+   ```
 
-### Run WinFetch
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-python main.py
-```
+3. **Run WinFetch:**
+   ```bash
+   # Easy way (recommended)
+   winfetch.bat
+   
+   # Or using PowerShell
+   .\winfetch.ps1
+   
+   # Or directly with Python
+   python main.py
+   ```
 
 ## Usage
+
+### Easy Launchers
+
+WinFetch includes convenient launcher scripts that automatically find your Python installation:
+
+- **`winfetch.bat`** - Windows batch file (works in CMD and PowerShell)
+- **`winfetch.ps1`** - PowerShell script with better error handling
 
 ### Basic Usage
 
 ```bash
 # Display system info with default ASCII art
+winfetch.bat
+# or
+.\winfetch.ps1
+# or
 python main.py
 
 # Use a specific built-in ASCII art
-python main.py --ascii-art windows_simple
+winfetch.bat --ascii-art windows_simple
 
 # Use custom ASCII art from file
-python main.py --ascii-art /path/to/your/art.txt
+winfetch.bat --ascii-art /path/to/your/art.txt
 
 # Disable colors
-python main.py --no-color
+winfetch.bat --no-color
 
 # List available built-in ASCII arts
-python main.py --list-arts
+winfetch.bat --list-arts
+
+# Show version information
+winfetch.bat --version
 ```
 
-## Development Status
+### Command Line Options
 
-🚧 **This project is currently being prepared for open source release** 🚧
+| Option | Description |
+|--------|-------------|
+| `-a, --ascii-art` | Specify ASCII art file or built-in name |
+| `-c, --config` | Path to custom configuration file |
+| `--no-color` | Disable colored output |
+| `--list-arts` | List available built-in ASCII art options |
+| `-v, --version` | Show version information |
 
-Some files may be missing or incomplete. The core functionality is working, but we're in the process of organizing the codebase for public contribution.
+## Built-in ASCII Art
+
+WinFetch comes with several built-in ASCII art designs:
+
+- `windows` - Default Windows logo design
+- `windows_simple` - Simple Windows logo
+
+View all available options with:
+```bash
+winfetch.bat --list-arts
+```
+
+## Configuration
+
+WinFetch creates a configuration file at: `%LOCALAPPDATA%\winfetch\config.yaml`
+
+You can customize:
+- Colors and color schemes
+- Which system information to display
+- Default ASCII art
+- And more!
+
+## System Information Displayed
+
+WinFetch shows comprehensive system information using Windows-specific APIs:
+
+- **User & Hostname** - Current user and computer name
+- **OS** - Windows edition and build number (via WMI)
+- **Kernel** - Windows kernel version
+- **Uptime** - System uptime since last boot
+- **Shell** - Current shell (CMD, PowerShell, etc.)
+- **Terminal** - Terminal emulator detection
+- **CPU** - Processor name, cores, and threads (via WMI)
+- **GPU** - Graphics card information (via WMI)
+- **Memory** - RAM usage and total capacity
+- **Disk** - System drive usage (C:)
+- **Network** - Active network interfaces and IP addresses
 
 ## Contributing
 
